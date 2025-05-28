@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Studio Encantador | Web & Business Consulting</title>
   </head>
   <body>
@@ -25,7 +36,11 @@
           Expert consulting and bespoke web solutions for growth and innovation.
           We partner with you to achieve sustainable success.
         </p>
-        <button class="btn-secondary">Get your free consultation</button>
+        <!-- <button class="btn-secondary">Get your free consultation</button> -->
+        <button class="mdc-button foo-button">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">Get your free consultation</span>
+        </button>
       </section>
 
       <section id="services" class="services">
@@ -82,5 +97,6 @@
         <a href="">WhatsApp</a>
       </div>
     </footer>
+    <script src="/index.js"></script>
   </body>
 </html>
