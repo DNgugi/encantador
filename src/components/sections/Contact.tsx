@@ -60,11 +60,22 @@ const Contact: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would normally handle the form submission, e.g., sending to an API
-    console.log(formData);
-    alert("Thank you for your message! We will get back to you soon.");
+    const res = await fetch("https://formspree.io/f/mnqrnpkd", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    }).then((data) => data.json());
+    // console.log(res);
+    // console.log(formData);
+    alert(
+      "Thank you for your message! We will get back to you soon. In the meantime, WhatsApp/Call us: +852 6055 8509"
+    );
     setFormData({
       name: "",
       email: "",
@@ -129,16 +140,16 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="rounded-xl overflow-hidden h-64 shadow-soft">
+            {/* <div className="rounded-xl overflow-hidden h-64 shadow-soft"> */}
               {/* In a real implementation, you would include an actual map here */}
-              <div className="w-full h-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-neutral-500 dark:text-neutral-400">
+              {/* <div className="w-full h-full bg-neutral-200 dark:bg-neutral-700 flex items-center justify-center text-neutral-500 dark:text-neutral-400">
                 <span className="text-center px-4">
                   Map would be displayed here
                   <br />
                   (Google Maps or similar integration)
                 </span>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </motion.div>
 
           <motion.div
@@ -151,12 +162,8 @@ const Contact: React.FC = () => {
               <h3 className="font-display text-2xl font-medium mb-6 text-neutral-900 dark:text-neutral-100">
                 Send Us a Message
               </h3>
-              <form
-                action="https://formspree.io/f/mnqrnpkd"
-                method="POST"
-                className="space-y-6"
-              >
-                {/* <form onSubmit={handleSubmit} className="space-y-6"> */}
+
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
