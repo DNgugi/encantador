@@ -1,102 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <link
-      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <meta charset="UTF-8" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Studio Encantador | Web & Business Consulting</title>
+    <title>Encantador Studio | Elegant Business Solutions</title>
+    <meta name="description" content="We create elegant, charming solutions for businesses through expert consulting and web development services." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <header>
-      <img src="/assets/logo.png" alt="logo" srcset="" />
-      <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Client Stories</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="btn">Get free quote</button>
-    </header>
-    <main>
-      <section id="hero" class="hero">
-        <h1>Elevate Your Business, Master Your Digital Presence.</h1>
-        <p>
-          Expert consulting and bespoke web solutions for growth and innovation.
-          We partner with you to achieve sustainable success.
-        </p>
-        <!-- <button class="btn-secondary">Get your free consultation</button> -->
-        <button class="mdc-button foo-button">
-          <div class="mdc-button__ripple"></div>
-          <span class="mdc-button__label">Get your free consultation</span>
-        </button>
-      </section>
-
-      <section id="services" class="services">
-        <article class="card">
-          <span class="card__icon"><i></i>Briefcase</span>
-          <h3 class="card__title">Business Consulting</h3>
-          <p class="card__body">
-            Unlock growth potential with expert strategic planning, market
-            analysis, and operational efficiency improvements tailored to your
-            unique business needs.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card__icon"><i></i>Brackets</span>
-          <h3 class="card__title">Web Design & Development</h3>
-          <p class="card__body">
-            Create stunning, responsive, and high-performing websites and web
-            applications that provide exceptional user experiences and drive
-            results.
-          </p>
-        </article>
-      </section>
-
-      <section class="testimonials">
-        <h2>Client Success Stories</h2>
-        <h2>Case Studies & Highlights</h2>
-      </section>
-      <section id="contact" class="contact">
-        <form action="" class="contact__form">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" />
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
-          <label for="msg">Message</label>
-          <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
-        </form>
-
-        <article class="contact__details">
-          <p>Have questions or ready to start your project? Reach out to us</p>
-          <p>Email:</p>
-          <p>Phone:</p>
-          <p>WhatsApp:</p>
-          <p>Address:</p>
-        </article>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025, Studio Encantador</p>
-      <div class="social-icons">
-        <a href="http://">LinkedIn</a>
-        <a href="http://">Facebook</a>
-        <a href="">Instagram</a>
-        <a href="">WhatsApp</a>
-      </div>
-    </footer>
-    <script src="/index.js"></script>
+  <body class="bg-accent-100 dark:bg-neutral-900 text-neutral-800 dark:text-neutral-100 font-sans antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
