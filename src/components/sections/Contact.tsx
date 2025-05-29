@@ -138,7 +138,7 @@ const Contact: React.FC = () => {
                   (Google Maps or similar integration)
                 </span>
               </div>
-            </div> 
+            </div>
           </motion.div>
 
           <motion.div
@@ -151,8 +151,12 @@ const Contact: React.FC = () => {
               <h3 className="font-display text-2xl font-medium mb-6 text-neutral-900 dark:text-neutral-100">
                 Send Us a Message
               </h3>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                action="https://formspree.io/f/mnqrnpkd"
+                method="POST"
+                className="space-y-6"
+              >
+                {/* <form onSubmit={handleSubmit} className="space-y-6"> */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label
