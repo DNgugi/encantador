@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
       },
       body: JSON.stringify(formData),
     }).then((data) => data.json());
-    // console.log(res);
+    console.log(res);
     // console.log(formData);
     alert(
       "Thank you for your message! We will get back to you soon. In the meantime, WhatsApp/Call us: +852 6055 8509"

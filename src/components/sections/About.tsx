@@ -91,7 +91,7 @@ const About: React.FC = () => {
             </div>
 
             <Button href="#contact" variant="primary">
-              Get to Know Us
+              Get in touch
             </Button>
           </motion.div>
         </div>

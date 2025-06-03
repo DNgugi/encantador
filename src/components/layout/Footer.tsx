@@ -1,5 +1,5 @@
 import React from "react";
-import { Briefcase, Instagram, Twitter, Linkedin, Mail } from "lucide-react";
+import { Instagram, Twitter, Linkedin, Mail, Shapes } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +10,9 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Briefcase size={24} className="stroke-primary-500" />
+              <Shapes size={24} className="stroke-primary-500" />
               <span className="text-xl font-display font-semibold text-primary-500">
-                Encantador
+                Studio Encantador
               </span>
             </div>
             <p className="text-neutral-600 dark:text-neutral-400 mb-6 max-w-md">
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
               better, both online and offline.
             </p>
             <div className="flex space-x-4">
-              <a
+              {/* <a
                 href="#"
                 className="text-neutral-600 hover:text-primary-500 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors"
               >
@@ -40,14 +40,14 @@ const Footer: React.FC = () => {
               >
                 <Linkedin size={20} />
                 <span className="sr-only">LinkedIn</span>
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="mailto:hello@encantador.studio"
                 className="text-neutral-600 hover:text-primary-500 dark:text-neutral-400 dark:hover:text-primary-400 transition-colors"
               >
                 <Mail size={20} />
                 <span className="sr-only">Email</span>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -107,18 +107,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="pt-8 border-t border-neutral-200 dark:border-neutral-700 text-neutral-500 dark:text-neutral-400 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© {currentYear} Encantador Studio. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-primary-500 transition-colors">
-              Terms
-            </a>
-            <a href="#" className="hover:text-primary-500 transition-colors">
-              Privacy
-            </a>
-            <a href="#" className="hover:text-primary-500 transition-colors">
-              Cookies
-            </a>
-          </div>
+          <p>© {currentYear} Studio Encantador. All rights reserved.</p>
         </div>
       </div>
     </footer>
